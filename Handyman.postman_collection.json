@@ -1,0 +1,674 @@
+{
+	"info": {
+		"_postman_id": "672f0c72-74cc-467e-be3c-43219f171a38",
+		"name": "Handyman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@demo.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admindemo123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDMyN2Y5MzA1YjIyMjdlZTg0OTVjMjg2NDFlM2E4ZmE5MTQyNjIzZWZhNWRlZjM0ZGNhOTZjMTgyZGI0NGYyMWJmY2UwYjI0ZGIwNjYwY2YiLCJpYXQiOjE2MjM5NTgzMzUuODg4MTA4LCJuYmYiOjE2MjM5NTgzMzUuODg4MTE4LCJleHAiOjE2NTU0OTQzMzUuNDYwODA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u-uSa2kgEW8waie6vGvhTtU-Hq26BcyDGywELzkOT99awoXZ5_GBzxpDSB17x1VmDISmWd0sBxwvUfMPhFs-404dzfl0HpyN_Vd4tcHtzqtxb5TGZ1FKJdpKfVPQJh6y_P7akOH2plf2I6x1zYre5egRzoUVU8j1m6iA1OEPilp4mbPAWN3rguwVCOnFIEyPhmn75enwFdo5LLqu6qgRQULNlmdwC1EYGbIqzFInYArR1fCPRXysChFzymCK-MS5SY1_OLphPF8FlXR9k4dt5lOhzectSGsU0QHYRsT4w0WnLJtd5An_T1LhlLztKOwqlSfbK7yw_2UaLVMiz21F49aFHS8UtPYgwOoM2JVun8fJK6hzEZp3VKL2Z8biFcLROG34HjLS41Abg8E83MkcbhfNiG-JfhzI8JxOSWr72rgul2iw6WzU9itj9hwYqeWhlp09YjnEZUGH7oAoVdkQKENFD0nveph_HQS28F7VHOEoA9rt5diVhH2WvNSh7HegbD5w5D_qMFEw7FabRB1NTHyH7jxscxGjOpFdSegqvAefVrfa_qh4b7nyHCZE0X115HFYeoJKKAZtHbU7ID7x_oO7Un9rjIqfSL3iJDhkhhYUugfSb4adbEPrqN7tYU61dq2uYV9g3stSJcETDNoERgWf8aNz68XLHcNdof5-jA4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Mladen",
+							"type": "text"
+						},
+						{
+							"key": "surname",
+							"value": "Jelovac",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "jasarahmedovski",
+							"type": "text"
+						},
+						{
+							"key": "role_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "profession_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Mladen/Downloads/ormar-ukras.png"
+						},
+						{
+							"key": "cities",
+							"value": "[2,3]",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jelovacmladen@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/addUser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCity",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDMyN2Y5MzA1YjIyMjdlZTg0OTVjMjg2NDFlM2E4ZmE5MTQyNjIzZWZhNWRlZjM0ZGNhOTZjMTgyZGI0NGYyMWJmY2UwYjI0ZGIwNjYwY2YiLCJpYXQiOjE2MjM5NTgzMzUuODg4MTA4LCJuYmYiOjE2MjM5NTgzMzUuODg4MTE4LCJleHAiOjE2NTU0OTQzMzUuNDYwODA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u-uSa2kgEW8waie6vGvhTtU-Hq26BcyDGywELzkOT99awoXZ5_GBzxpDSB17x1VmDISmWd0sBxwvUfMPhFs-404dzfl0HpyN_Vd4tcHtzqtxb5TGZ1FKJdpKfVPQJh6y_P7akOH2plf2I6x1zYre5egRzoUVU8j1m6iA1OEPilp4mbPAWN3rguwVCOnFIEyPhmn75enwFdo5LLqu6qgRQULNlmdwC1EYGbIqzFInYArR1fCPRXysChFzymCK-MS5SY1_OLphPF8FlXR9k4dt5lOhzectSGsU0QHYRsT4w0WnLJtd5An_T1LhlLztKOwqlSfbK7yw_2UaLVMiz21F49aFHS8UtPYgwOoM2JVun8fJK6hzEZp3VKL2Z8biFcLROG34HjLS41Abg8E83MkcbhfNiG-JfhzI8JxOSWr72rgul2iw6WzU9itj9hwYqeWhlp09YjnEZUGH7oAoVdkQKENFD0nveph_HQS28F7VHOEoA9rt5diVhH2WvNSh7HegbD5w5D_qMFEw7FabRB1NTHyH7jxscxGjOpFdSegqvAefVrfa_qh4b7nyHCZE0X115HFYeoJKKAZtHbU7ID7x_oO7Un9rjIqfSL3iJDhkhhYUugfSb4adbEPrqN7tYU61dq2uYV9g3stSJcETDNoERgWf8aNz68XLHcNdof5-jA4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Berane",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/city/addCity",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"city",
+						"addCity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addProfession",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDMyN2Y5MzA1YjIyMjdlZTg0OTVjMjg2NDFlM2E4ZmE5MTQyNjIzZWZhNWRlZjM0ZGNhOTZjMTgyZGI0NGYyMWJmY2UwYjI0ZGIwNjYwY2YiLCJpYXQiOjE2MjM5NTgzMzUuODg4MTA4LCJuYmYiOjE2MjM5NTgzMzUuODg4MTE4LCJleHAiOjE2NTU0OTQzMzUuNDYwODA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u-uSa2kgEW8waie6vGvhTtU-Hq26BcyDGywELzkOT99awoXZ5_GBzxpDSB17x1VmDISmWd0sBxwvUfMPhFs-404dzfl0HpyN_Vd4tcHtzqtxb5TGZ1FKJdpKfVPQJh6y_P7akOH2plf2I6x1zYre5egRzoUVU8j1m6iA1OEPilp4mbPAWN3rguwVCOnFIEyPhmn75enwFdo5LLqu6qgRQULNlmdwC1EYGbIqzFInYArR1fCPRXysChFzymCK-MS5SY1_OLphPF8FlXR9k4dt5lOhzectSGsU0QHYRsT4w0WnLJtd5An_T1LhlLztKOwqlSfbK7yw_2UaLVMiz21F49aFHS8UtPYgwOoM2JVun8fJK6hzEZp3VKL2Z8biFcLROG34HjLS41Abg8E83MkcbhfNiG-JfhzI8JxOSWr72rgul2iw6WzU9itj9hwYqeWhlp09YjnEZUGH7oAoVdkQKENFD0nveph_HQS28F7VHOEoA9rt5diVhH2WvNSh7HegbD5w5D_qMFEw7FabRB1NTHyH7jxscxGjOpFdSegqvAefVrfa_qh4b7nyHCZE0X115HFYeoJKKAZtHbU7ID7x_oO7Un9rjIqfSL3iJDhkhhYUugfSb4adbEPrqN7tYU61dq2uYV9g3stSJcETDNoERgWf8aNz68XLHcNdof5-jA4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Moler",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/profession/addProfession",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"profession",
+						"addProfession"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProfession",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDMyN2Y5MzA1YjIyMjdlZTg0OTVjMjg2NDFlM2E4ZmE5MTQyNjIzZWZhNWRlZjM0ZGNhOTZjMTgyZGI0NGYyMWJmY2UwYjI0ZGIwNjYwY2YiLCJpYXQiOjE2MjM5NTgzMzUuODg4MTA4LCJuYmYiOjE2MjM5NTgzMzUuODg4MTE4LCJleHAiOjE2NTU0OTQzMzUuNDYwODA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u-uSa2kgEW8waie6vGvhTtU-Hq26BcyDGywELzkOT99awoXZ5_GBzxpDSB17x1VmDISmWd0sBxwvUfMPhFs-404dzfl0HpyN_Vd4tcHtzqtxb5TGZ1FKJdpKfVPQJh6y_P7akOH2plf2I6x1zYre5egRzoUVU8j1m6iA1OEPilp4mbPAWN3rguwVCOnFIEyPhmn75enwFdo5LLqu6qgRQULNlmdwC1EYGbIqzFInYArR1fCPRXysChFzymCK-MS5SY1_OLphPF8FlXR9k4dt5lOhzectSGsU0QHYRsT4w0WnLJtd5An_T1LhlLztKOwqlSfbK7yw_2UaLVMiz21F49aFHS8UtPYgwOoM2JVun8fJK6hzEZp3VKL2Z8biFcLROG34HjLS41Abg8E83MkcbhfNiG-JfhzI8JxOSWr72rgul2iw6WzU9itj9hwYqeWhlp09YjnEZUGH7oAoVdkQKENFD0nveph_HQS28F7VHOEoA9rt5diVhH2WvNSh7HegbD5w5D_qMFEw7FabRB1NTHyH7jxscxGjOpFdSegqvAefVrfa_qh4b7nyHCZE0X115HFYeoJKKAZtHbU7ID7x_oO7Un9rjIqfSL3iJDhkhhYUugfSb4adbEPrqN7tYU61dq2uYV9g3stSJcETDNoERgWf8aNz68XLHcNdof5-jA4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Frizer",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/profession/updateProfession",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"profession",
+						"updateProfession"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProfession",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDMyN2Y5MzA1YjIyMjdlZTg0OTVjMjg2NDFlM2E4ZmE5MTQyNjIzZWZhNWRlZjM0ZGNhOTZjMTgyZGI0NGYyMWJmY2UwYjI0ZGIwNjYwY2YiLCJpYXQiOjE2MjM5NTgzMzUuODg4MTA4LCJuYmYiOjE2MjM5NTgzMzUuODg4MTE4LCJleHAiOjE2NTU0OTQzMzUuNDYwODA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u-uSa2kgEW8waie6vGvhTtU-Hq26BcyDGywELzkOT99awoXZ5_GBzxpDSB17x1VmDISmWd0sBxwvUfMPhFs-404dzfl0HpyN_Vd4tcHtzqtxb5TGZ1FKJdpKfVPQJh6y_P7akOH2plf2I6x1zYre5egRzoUVU8j1m6iA1OEPilp4mbPAWN3rguwVCOnFIEyPhmn75enwFdo5LLqu6qgRQULNlmdwC1EYGbIqzFInYArR1fCPRXysChFzymCK-MS5SY1_OLphPF8FlXR9k4dt5lOhzectSGsU0QHYRsT4w0WnLJtd5An_T1LhlLztKOwqlSfbK7yw_2UaLVMiz21F49aFHS8UtPYgwOoM2JVun8fJK6hzEZp3VKL2Z8biFcLROG34HjLS41Abg8E83MkcbhfNiG-JfhzI8JxOSWr72rgul2iw6WzU9itj9hwYqeWhlp09YjnEZUGH7oAoVdkQKENFD0nveph_HQS28F7VHOEoA9rt5diVhH2WvNSh7HegbD5w5D_qMFEw7FabRB1NTHyH7jxscxGjOpFdSegqvAefVrfa_qh4b7nyHCZE0X115HFYeoJKKAZtHbU7ID7x_oO7Un9rjIqfSL3iJDhkhhYUugfSb4adbEPrqN7tYU61dq2uYV9g3stSJcETDNoERgWf8aNz68XLHcNdof5-jA4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/profession/deleteProfession",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"profession",
+						"deleteProfession"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCity",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDMyN2Y5MzA1YjIyMjdlZTg0OTVjMjg2NDFlM2E4ZmE5MTQyNjIzZWZhNWRlZjM0ZGNhOTZjMTgyZGI0NGYyMWJmY2UwYjI0ZGIwNjYwY2YiLCJpYXQiOjE2MjM5NTgzMzUuODg4MTA4LCJuYmYiOjE2MjM5NTgzMzUuODg4MTE4LCJleHAiOjE2NTU0OTQzMzUuNDYwODA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u-uSa2kgEW8waie6vGvhTtU-Hq26BcyDGywELzkOT99awoXZ5_GBzxpDSB17x1VmDISmWd0sBxwvUfMPhFs-404dzfl0HpyN_Vd4tcHtzqtxb5TGZ1FKJdpKfVPQJh6y_P7akOH2plf2I6x1zYre5egRzoUVU8j1m6iA1OEPilp4mbPAWN3rguwVCOnFIEyPhmn75enwFdo5LLqu6qgRQULNlmdwC1EYGbIqzFInYArR1fCPRXysChFzymCK-MS5SY1_OLphPF8FlXR9k4dt5lOhzectSGsU0QHYRsT4w0WnLJtd5An_T1LhlLztKOwqlSfbK7yw_2UaLVMiz21F49aFHS8UtPYgwOoM2JVun8fJK6hzEZp3VKL2Z8biFcLROG34HjLS41Abg8E83MkcbhfNiG-JfhzI8JxOSWr72rgul2iw6WzU9itj9hwYqeWhlp09YjnEZUGH7oAoVdkQKENFD0nveph_HQS28F7VHOEoA9rt5diVhH2WvNSh7HegbD5w5D_qMFEw7FabRB1NTHyH7jxscxGjOpFdSegqvAefVrfa_qh4b7nyHCZE0X115HFYeoJKKAZtHbU7ID7x_oO7Un9rjIqfSL3iJDhkhhYUugfSb4adbEPrqN7tYU61dq2uYV9g3stSJcETDNoERgWf8aNz68XLHcNdof5-jA4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Bijelo Polje",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "7",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/city/updateCity",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"city",
+						"updateCity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCity",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDMyN2Y5MzA1YjIyMjdlZTg0OTVjMjg2NDFlM2E4ZmE5MTQyNjIzZWZhNWRlZjM0ZGNhOTZjMTgyZGI0NGYyMWJmY2UwYjI0ZGIwNjYwY2YiLCJpYXQiOjE2MjM5NTgzMzUuODg4MTA4LCJuYmYiOjE2MjM5NTgzMzUuODg4MTE4LCJleHAiOjE2NTU0OTQzMzUuNDYwODA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u-uSa2kgEW8waie6vGvhTtU-Hq26BcyDGywELzkOT99awoXZ5_GBzxpDSB17x1VmDISmWd0sBxwvUfMPhFs-404dzfl0HpyN_Vd4tcHtzqtxb5TGZ1FKJdpKfVPQJh6y_P7akOH2plf2I6x1zYre5egRzoUVU8j1m6iA1OEPilp4mbPAWN3rguwVCOnFIEyPhmn75enwFdo5LLqu6qgRQULNlmdwC1EYGbIqzFInYArR1fCPRXysChFzymCK-MS5SY1_OLphPF8FlXR9k4dt5lOhzectSGsU0QHYRsT4w0WnLJtd5An_T1LhlLztKOwqlSfbK7yw_2UaLVMiz21F49aFHS8UtPYgwOoM2JVun8fJK6hzEZp3VKL2Z8biFcLROG34HjLS41Abg8E83MkcbhfNiG-JfhzI8JxOSWr72rgul2iw6WzU9itj9hwYqeWhlp09YjnEZUGH7oAoVdkQKENFD0nveph_HQS28F7VHOEoA9rt5diVhH2WvNSh7HegbD5w5D_qMFEw7FabRB1NTHyH7jxscxGjOpFdSegqvAefVrfa_qh4b7nyHCZE0X115HFYeoJKKAZtHbU7ID7x_oO7Un9rjIqfSL3iJDhkhhYUugfSb4adbEPrqN7tYU61dq2uYV9g3stSJcETDNoERgWf8aNz68XLHcNdof5-jA4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "7",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/city/deleteCity",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"city",
+						"deleteCity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDMyN2Y5MzA1YjIyMjdlZTg0OTVjMjg2NDFlM2E4ZmE5MTQyNjIzZWZhNWRlZjM0ZGNhOTZjMTgyZGI0NGYyMWJmY2UwYjI0ZGIwNjYwY2YiLCJpYXQiOjE2MjM5NTgzMzUuODg4MTA4LCJuYmYiOjE2MjM5NTgzMzUuODg4MTE4LCJleHAiOjE2NTU0OTQzMzUuNDYwODA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u-uSa2kgEW8waie6vGvhTtU-Hq26BcyDGywELzkOT99awoXZ5_GBzxpDSB17x1VmDISmWd0sBxwvUfMPhFs-404dzfl0HpyN_Vd4tcHtzqtxb5TGZ1FKJdpKfVPQJh6y_P7akOH2plf2I6x1zYre5egRzoUVU8j1m6iA1OEPilp4mbPAWN3rguwVCOnFIEyPhmn75enwFdo5LLqu6qgRQULNlmdwC1EYGbIqzFInYArR1fCPRXysChFzymCK-MS5SY1_OLphPF8FlXR9k4dt5lOhzectSGsU0QHYRsT4w0WnLJtd5An_T1LhlLztKOwqlSfbK7yw_2UaLVMiz21F49aFHS8UtPYgwOoM2JVun8fJK6hzEZp3VKL2Z8biFcLROG34HjLS41Abg8E83MkcbhfNiG-JfhzI8JxOSWr72rgul2iw6WzU9itj9hwYqeWhlp09YjnEZUGH7oAoVdkQKENFD0nveph_HQS28F7VHOEoA9rt5diVhH2WvNSh7HegbD5w5D_qMFEw7FabRB1NTHyH7jxscxGjOpFdSegqvAefVrfa_qh4b7nyHCZE0X115HFYeoJKKAZtHbU7ID7x_oO7Un9rjIqfSL3iJDhkhhYUugfSb4adbEPrqN7tYU61dq2uYV9g3stSJcETDNoERgWf8aNz68XLHcNdof5-jA4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Mladena",
+							"type": "text"
+						},
+						{
+							"key": "surname",
+							"value": "Jelovaca",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "sabansaulic",
+							"type": "text"
+						},
+						{
+							"key": "role_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "profession_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Mladen/Downloads/Proizvod Detaljno V2.png"
+						},
+						{
+							"key": "cities",
+							"value": "[1,5]",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "mladenjelovac@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/updateUser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"updateUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "changeProfile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTJmODhhYzJiMmUzNGM3ZTczYjhjYjNiYzc4YzdkY2JiYzhkZmMxZDgxYzljMjIxZDNiMDMxMDkzN2UzM2ZjNDQ4YTc0MzRkYWNhODE5Y2IiLCJpYXQiOjE2MjM5NjQzNDIuOTg4MzA1LCJuYmYiOjE2MjM5NjQzNDIuOTg4MzE0LCJleHAiOjE2NTU1MDAzNDIuOTQxMjgzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Hym2HUEBy2N_zYTTT4UwP6g2hWofbR9d_VLAm_P6kuKwXJf5Wlat-a6U_eKu0AQbacvjhftj_4vVivwS9IeRF6Fc8sj_pvYTyvbkJh9Z2Kxp9R0Q2xndXI-5X0-6JHGll14-4gKp9JGgNOEqQ6IMfudrO3RqNytdUt0c54KQEX20VqJkxp3YW7XGK0vh_pYhL9_4_s5j4-7uKhM7MWLgXYv4SBgbgaDnuoMhMflaPsfM7NuDtdelNixSNGNlGPTgGclqMPcpt2YV-FKpaZNJDprmjjWpvq5PFqJITDIRe45Qsmn4Lh3ntuyFF5_CWdOFEJf98vbyV_XU74_ZYt3TbxPrUAGkD_YYNRzDm5MRGIPxRht6Pd2GEQT2lCv_53nomnoHOf2vtAp1dC-oss9V_FK6i0dIRv8yuJnr8juJVb7ta2mJP-DnVqoNWwfjoaMuBNUNFNc5zoHhsNC9FuIT4-m-6A4Nr6kSsL90zN7umj90YI-OXcUA6Ctc7RC2F_ansnu_qgxWknKW_vQxk-0Co9x6Q_euPxrxXWMW_3V94Gmjh_GakupDO-NMpmUc7T3Ivlup0r2IH_5o-Utwq7zOrbG2-I1b62y2QfUHx9y3unhVlF1QWzCEaS1pE1Ypkxe4Hp-Jlh39IkJpw2twayHi9Hb96MTBpFPA2dwlowNCVmw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Jašar",
+							"type": "text"
+						},
+						{
+							"key": "surname",
+							"value": "Ahmedovski",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admindemo123",
+							"type": "text"
+						},
+						{
+							"key": "role_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "profession_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Mladen/Downloads/bager-ukras.png"
+						},
+						{
+							"key": "cities",
+							"value": "[1,5]",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "admin@demo.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/changeProfile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"changeProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDMyN2Y5MzA1YjIyMjdlZTg0OTVjMjg2NDFlM2E4ZmE5MTQyNjIzZWZhNWRlZjM0ZGNhOTZjMTgyZGI0NGYyMWJmY2UwYjI0ZGIwNjYwY2YiLCJpYXQiOjE2MjM5NTgzMzUuODg4MTA4LCJuYmYiOjE2MjM5NTgzMzUuODg4MTE4LCJleHAiOjE2NTU0OTQzMzUuNDYwODA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u-uSa2kgEW8waie6vGvhTtU-Hq26BcyDGywELzkOT99awoXZ5_GBzxpDSB17x1VmDISmWd0sBxwvUfMPhFs-404dzfl0HpyN_Vd4tcHtzqtxb5TGZ1FKJdpKfVPQJh6y_P7akOH2plf2I6x1zYre5egRzoUVU8j1m6iA1OEPilp4mbPAWN3rguwVCOnFIEyPhmn75enwFdo5LLqu6qgRQULNlmdwC1EYGbIqzFInYArR1fCPRXysChFzymCK-MS5SY1_OLphPF8FlXR9k4dt5lOhzectSGsU0QHYRsT4w0WnLJtd5An_T1LhlLztKOwqlSfbK7yw_2UaLVMiz21F49aFHS8UtPYgwOoM2JVun8fJK6hzEZp3VKL2Z8biFcLROG34HjLS41Abg8E83MkcbhfNiG-JfhzI8JxOSWr72rgul2iw6WzU9itj9hwYqeWhlp09YjnEZUGH7oAoVdkQKENFD0nveph_HQS28F7VHOEoA9rt5diVhH2WvNSh7HegbD5w5D_qMFEw7FabRB1NTHyH7jxscxGjOpFdSegqvAefVrfa_qh4b7nyHCZE0X115HFYeoJKKAZtHbU7ID7x_oO7Un9rjIqfSL3iJDhkhhYUugfSb4adbEPrqN7tYU61dq2uYV9g3stSJcETDNoERgWf8aNz68XLHcNdof5-jA4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/deleteUser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"deleteUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUsers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDMyN2Y5MzA1YjIyMjdlZTg0OTVjMjg2NDFlM2E4ZmE5MTQyNjIzZWZhNWRlZjM0ZGNhOTZjMTgyZGI0NGYyMWJmY2UwYjI0ZGIwNjYwY2YiLCJpYXQiOjE2MjM5NTgzMzUuODg4MTA4LCJuYmYiOjE2MjM5NTgzMzUuODg4MTE4LCJleHAiOjE2NTU0OTQzMzUuNDYwODA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u-uSa2kgEW8waie6vGvhTtU-Hq26BcyDGywELzkOT99awoXZ5_GBzxpDSB17x1VmDISmWd0sBxwvUfMPhFs-404dzfl0HpyN_Vd4tcHtzqtxb5TGZ1FKJdpKfVPQJh6y_P7akOH2plf2I6x1zYre5egRzoUVU8j1m6iA1OEPilp4mbPAWN3rguwVCOnFIEyPhmn75enwFdo5LLqu6qgRQULNlmdwC1EYGbIqzFInYArR1fCPRXysChFzymCK-MS5SY1_OLphPF8FlXR9k4dt5lOhzectSGsU0QHYRsT4w0WnLJtd5An_T1LhlLztKOwqlSfbK7yw_2UaLVMiz21F49aFHS8UtPYgwOoM2JVun8fJK6hzEZp3VKL2Z8biFcLROG34HjLS41Abg8E83MkcbhfNiG-JfhzI8JxOSWr72rgul2iw6WzU9itj9hwYqeWhlp09YjnEZUGH7oAoVdkQKENFD0nveph_HQS28F7VHOEoA9rt5diVhH2WvNSh7HegbD5w5D_qMFEw7FabRB1NTHyH7jxscxGjOpFdSegqvAefVrfa_qh4b7nyHCZE0X115HFYeoJKKAZtHbU7ID7x_oO7Un9rjIqfSL3iJDhkhhYUugfSb4adbEPrqN7tYU61dq2uYV9g3stSJcETDNoERgWf8aNz68XLHcNdof5-jA4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "offset",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/getUsers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"getUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCities",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/city/getCities",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"city",
+						"getCities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProfessions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/profession/getProfessions",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"profession",
+						"getProfessions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
